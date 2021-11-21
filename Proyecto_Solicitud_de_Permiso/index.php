@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Título del documento</title>
+  <title>Solicitud de Permiso</title>
   <!-- CDN de los íconos -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- CDN Materialize CSS  -->
@@ -19,13 +19,13 @@
 
         <!-- TÍTULOS -->
         <div class="row">
-        <h3 class="header left teal-text">TITULO FORMULARIO</h3>
+        <h3 class="header left teal-text">SOLICITUD DE PERMISO</h3>
         </div>
         <div class="row">
-        <h5 class="header left teal-text">SUBTITULO FORMULARIO</h5>
+        <h5 class="header left teal-text">Solicitar un permiso de ausencia</h5>
         </div>
         
-        <form class="col s12">
+        <form class="col s12" action="funcionalidad.php" >
             
             <!-- CAMPOS INPUT TEXT -->
             <div class="row">
@@ -51,12 +51,12 @@
                 <div class="row">
                 <div class="input-field col s6">
                     
-                <input type = "date" class = "datepicker" />
+                <input type = "date" class = "datepicker" id="fInicio"/>
                 <label>Fecha Inicio</label>        
                 </div>  
                 <div class="input-field col s6">
                             
-                <input type = "date" class = "datepicker" />
+                <input type = "date" class = "datepicker" id="fFinal"/>
                 <label>Fecha Fin</label> 
                 </div>  
                 </div>
@@ -64,15 +64,15 @@
                 <div class="row">
                 <p>
                 <label>
-                    <input type="checkbox" />
+                    <input type="checkbox" id="opcA"/>
                     <span>Opción A</span>
                 </label>
                 <label>
-                    <input type="checkbox" />
+                    <input type="checkbox" id="opcB"/>
                     <span>Opción B</span>
                 </label>
                 <label>
-                    <input type="checkbox" />
+                    <input type="checkbox" id="opcC"/>
                     <span>Opción C</span>
                 </label>
                 </p>
@@ -83,12 +83,12 @@
                 <p>
                 <p>
                     <label>
-                        <input name="group1" type="radio" checked />
+                        <input name="group1" type="radio" id="opc1" checked/>
                         <span>Opción 1</span>
                     </label>
                 
                     <label>
-                        <input name="group1" type="radio" />
+                        <input name="group1" type="radio" id="opc2"/>
                         <span>Opción 2</span>
                     </label>
                     </p>
@@ -98,7 +98,7 @@
             <!-- CAMPOS SELECT -->
                 <div class = "row">
                 <label>Opciones</label>
-                    <select>
+                    <select id="SelFruta">
                         <option value = "" disabled selected>Seleccione una fruta</option>
                         <option value = "1">Mango</option>
                         <option value = "2">Naranja</option>
@@ -108,7 +108,8 @@
 
                 <!-- BOTON -->
             <div class = "row">
-                <a class="waves-effect waves-light btn">Aceptar</a>
+               <!-- <a class="waves-effect waves-light btn" type="submit">Aceptar</a> -->
+                <button type="submit" class="waves-effect waves-light btn">Aceptar</button>
             </div>
             </form>
 
