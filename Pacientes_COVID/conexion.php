@@ -14,7 +14,7 @@ define("USUARIO", "root");
 
 define("CLAVE", "");
 
-define("BBDD", "bbdd_hospital");
+define("BBDD", "BBDD_Hospital");
 
 
 
